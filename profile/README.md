@@ -47,6 +47,18 @@ narzędziami w tym ekosystemie.
 
 ### Koncepcja Demo
 
+Demo będzie zawierać aplikację, która prezentuje możliwości narzędzi Argo Workflows oraz Argo CD w klastrze Kubernetes.
+
+Aplikacja będzie służyć jako punkt wejścia do uruchamiania zadań w Argo Workflows. Użytkownik będzie mógł wysyłać
+żądania HTTP do aplikacji, które następnie będą uruchamiać odpowiedni workflow za pomocą API do Argo Workflows.
+
+Continuous Delivery aplikacji będzie realizowane za pomocą Argo CD. Każda zmiana w repozytorium Git aplikacji będzie
+automatycznie wykrywana przez Argo CD, które następnie będzie aktualizować działającą na serwerze aplikację.
+
+Całość będzie znajdowała się w klastrze Kubernetes, który zostanie stworzony w AWS KMS. Kubernetes zapewni platformę do
+uruchamiania i zarządzania aplikacją i jej zależnościami, a AWS KMS zapewni infrastrukturę na której będzie działał
+klaster Kubernetes.
+
 ### Technologie realizacji Demo
 
 ### Opis konfiguracji
