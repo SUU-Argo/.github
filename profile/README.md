@@ -14,9 +14,10 @@
 1. [Podstawy teoretyczne](#podstawy-teoretyczne)
 2. [Koncepcja Demo](#koncepcja-demo)
 3. [Technologie realizacji Demo](#technologie-realizacji-demo)
-4. [Opis konfiguracji](#opis-konfiguracji)
-5. [Postępy prac](#postępy-prac)
-6. [Prezentacja Demo](#prezentacja-demo)
+4. [Podział pracy w zespole](#podział-pracy-w-zespole)
+5. [Opis konfiguracji](#opis-konfiguracji)
+6. [Postępy prac](#postępy-prac)
+7. [Prezentacja Demo](#prezentacja-demo)
 
 ### Podstawy teoretyczne
 
@@ -26,7 +27,7 @@ Native Computing Foundation. Kubernetes dostarcza platformę do uruchamiania apl
 zarządzając infrastrukturą i zapewniając funkcje, takie jak self-healing (automatyczne restartowanie kontenerów),
 odkrywanie usług i load balancing, przechowywanie danych, skalowanie i wiele innych.
 
-[Argo](https://argoproj.github.io/) jest projektem open source, który dostarcza narzędzia do tworzenia, uruchamiania i
+**[Argo](https://argoproj.github.io/)** jest projektem open source, który dostarcza narzędzia do tworzenia, uruchamiania i
 zarządzania pracami w kontenerach Kubernetes. Składa się z podprojektów, w których skład wchodzą Argo Workflows, Argo
 CD, Argo Rollouts oraz Argo Events.
 
@@ -41,25 +42,41 @@ implementuje podejście GitOps do zarządzania infrastrukturą. W modelu GitOps,
 repozytorium Git, a narzędzia automatycznie aktualizują systemy, aby dopasować je do stanu zapisanego w Git. Argo CD
 monitoruje repozytorium i automatycznie wdraża zmiany na środowiska Kubernetes, gdy stan w Git się zmienia.
 
-Oba narzędzia są zintegrowane z Kubernetes i wykorzystują jego funkcje, takie jak API, schematy autoryzacji i mechanizmy
+Oba omawiane podprojekty Argo są zintegrowane z Kubernetes i wykorzystują jego funkcje, takie jak API, schematy autoryzacji i mechanizmy
 skalowania. Dzięki temu są one naturalnym rozszerzeniem ekosystemu Kubernetes i mogą być łatwo zintegrowane z innymi
 narzędziami w tym ekosystemie.
 
 ### Koncepcja Demo
 
-Demo będzie zawierać aplikację, która prezentuje możliwości narzędzi Argo Workflows oraz Argo CD w klastrze Kubernetes.
+Demo będzie zawierać aplikację działającą w klastrze Kubernetes, która zaprezentuje możliwości narzędzi Argo Workflows oraz Argo CD.
 
 Aplikacja będzie służyć jako punkt wejścia do uruchamiania zadań w Argo Workflows. Użytkownik będzie mógł wysyłać
-żądania HTTP do aplikacji, które następnie będą uruchamiać odpowiedni workflow za pomocą API do Argo Workflows.
+żądania HTTP do aplikacji uruchamiające odpowiednie workflowy za pomocą API do Argo Workflows.
 
-Continuous Delivery aplikacji będzie realizowane za pomocą Argo CD. Każda zmiana w repozytorium Git aplikacji będzie
-automatycznie wykrywana przez Argo CD, które następnie będzie aktualizować działającą na serwerze aplikację.
-
-Całość będzie znajdowała się w klastrze Kubernetes, który zostanie stworzony w AWS KMS. Kubernetes zapewni platformę do
-uruchamiania i zarządzania aplikacją i jej zależnościami, a AWS KMS zapewni infrastrukturę na której będzie działał
-klaster Kubernetes.
+Każda zmiana w repozytorium przechowującym kod aplikacji będzie automatycznie wykrywana przez Argo CD, które następnie zaktualizuje działającą aplikację na klastrze.
 
 ### Technologie realizacji Demo
+
+- Amazon Elastic Kubernetes Service - AWS EKS zapewni infrastrukturę na której będzie działał klaster Kubernetes
+- GitHub - przechowywanie repozytorium Git z kodem źródłowym aplikacji
+- Python 3 - język implementacji aplikacji
+
+### Podział pracy w zespole
+
+Ponieważ w ramach tego projektu omawiamy dwa zastosowania Argo zdecydowaliśmy na podział zespołu na dwa podzespoły, każdy omawiający jedno z zastosowań.
+Docelowo praca obu podzespołów ma zostać połączona, tworząc integralną całość.
+
+#### Podzespół 1 - Argo CD
+
+Osoby: Dariusz Piwowarski, Przemysław Roman
+
+Cele: Stworzenie klastra Kubernetes na AWS oraz uruchomienie w nim Argo CD i zintegrowanie go z repozytorium aplikacji
+
+#### Podzespół 2 - Argo Workflows
+
+Osoby: Gabriel Kaźmierczak, Wojciech Przybytek
+
+Cele: Zapoznanie się z API Argo Workflows, napisanie aplikacji wykorzystującej to API oraz udostępniającej własny interfejs
 
 ### Opis konfiguracji
 
