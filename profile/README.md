@@ -12,9 +12,9 @@
 ### Spis treści
 
 1. [Podstawy teoretyczne](#podstawy-teoretyczne)
-2. [Koncepcja Demo](#koncepcja-demo)
-3. [Technologie realizacji Demo](#technologie-realizacji-demo)
-4. [Podział pracy w zespole](#podział-pracy-w-zespole)
+2. [Podział pracy w zespole](#podział-pracy-w-zespole)
+3. [Koncepcja Demo](#koncepcja-demo)
+4. [Technologie realizacji Demo](#technologie-realizacji-demo)
 5. [Opis konfiguracji](#opis-konfiguracji)
 6. [Postępy prac](#postępy-prac)
 7. [Prezentacja Demo](#prezentacja-demo)
@@ -46,21 +46,6 @@ Oba omawiane podprojekty Argo są zintegrowane z Kubernetes i wykorzystują jego
 skalowania. Dzięki temu są one naturalnym rozszerzeniem ekosystemu Kubernetes i mogą być łatwo zintegrowane z innymi
 narzędziami w tym ekosystemie.
 
-### Koncepcja Demo
-
-Demo będzie zawierać aplikację działającą w klastrze Kubernetes, która zaprezentuje możliwości narzędzi Argo Workflows oraz Argo CD.
-
-Aplikacja będzie służyć jako punkt wejścia do uruchamiania zadań w Argo Workflows. Użytkownik będzie mógł wysyłać
-żądania HTTP do aplikacji uruchamiające odpowiednie workflowy za pomocą API do Argo Workflows.
-
-Każda zmiana w repozytorium przechowującym kod aplikacji będzie automatycznie wykrywana przez Argo CD, które następnie zaktualizuje działającą aplikację na klastrze.
-
-### Technologie realizacji Demo
-
-- Amazon Elastic Kubernetes Service - AWS EKS zapewni infrastrukturę na której będzie działał klaster Kubernetes
-- GitHub - przechowywanie repozytorium Git z kodem źródłowym aplikacji
-- Python 3 - język implementacji aplikacji
-
 ### Podział pracy w zespole
 
 Ponieważ w ramach tego projektu omawiamy dwa zastosowania Argo zdecydowaliśmy na podział zespołu na dwa podzespoły, każdy omawiający jedno z zastosowań.
@@ -77,6 +62,21 @@ Cele: Stworzenie klastra Kubernetes na AWS oraz uruchomienie w nim Argo CD i zin
 Osoby: Gabriel Kaźmierczak, Wojciech Przybytek
 
 Cele: Zapoznanie się z API Argo Workflows, napisanie aplikacji wykorzystującej to API oraz udostępniającej własny interfejs
+
+### Koncepcja Demo
+
+Demo będzie zawierać aplikację działającą w klastrze Kubernetes, która zaprezentuje możliwości narzędzi Argo Workflows oraz Argo CD.
+
+Aplikacja będzie służyć jako punkt wejścia do uruchamiania zadań w Argo Workflows. Użytkownik będzie mógł wysyłać
+żądania HTTP do aplikacji uruchamiające odpowiednie workflowy za pomocą API do Argo Workflows.
+
+Każda zmiana w repozytorium przechowującym kod aplikacji będzie automatycznie wykrywana przez Argo CD, które następnie zaktualizuje działającą aplikację na klastrze.
+
+### Technologie realizacji Demo
+
+- Amazon Elastic Kubernetes Service - AWS EKS zapewni infrastrukturę na której będzie działał klaster Kubernetes
+- GitHub - przechowywanie repozytorium Git z kodem źródłowym aplikacji
+- Python 3 - język implementacji aplikacji
 
 ### Opis konfiguracji
 
