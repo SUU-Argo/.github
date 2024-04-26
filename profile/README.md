@@ -77,8 +77,12 @@ Każda zmiana w repozytorium przechowującym kod aplikacji będzie automatycznie
 - Amazon Elastic Kubernetes Service - AWS EKS zapewni infrastrukturę na której będzie działał klaster Kubernetes
 - GitHub - przechowywanie repozytorium Git z kodem źródłowym aplikacji
 - Python 3 - język implementacji aplikacji
+- [Couler](https://github.com/couler-proj/couler) - biblioteka do komunikacji z API Argo
 
 ### Opis konfiguracji
+![suu_env_conf drawio](https://github.com/SUU-Argo/.github/assets/46900653/65708f37-c412-4f7b-8d0c-fc4cf38f8fb8)
+
+
 
 ### Postępy prac
 
