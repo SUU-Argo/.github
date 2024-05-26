@@ -1,19 +1,10 @@
 # ArgoCD
 ## Prerequisites
-- terraform
-- kubectl
-- aws-cli
 - argocd
 
 ## Running
 ### Kubernetes setup
-1. Store AWS credentials and config in ~/.aws/
-2. Clone infra repo: `git clone git@github.com:SUU-Argo/infra.git && cd infra`
-3. `terraform init`
-4. `terraform apply`
-5. Check the cluster's name: `aws eks list-clusters `
-6. Generate kubeconfig: `aws eks update-kubeconfig --name <your cluster>`
-7. Verify connection via kubectl: `kubectl get nodes`
+Clone [infra repo](https://github.com/SUU-Argo/infra) and follow steps from README.
 
 ### ArgoCD setup
 1. Create namespace: `kubectl create namespace argocd`
@@ -65,6 +56,4 @@ Change in code is reflected
 
 
 ## Sources
-- https://developer.hashicorp.com/terraform/tutorials/kubernetes/eks
-- https://github.com/hashicorp/learn-terraform-provision-eks-cluster
 - https://argo-cd.readthedocs.io/en/stable/getting_started/
