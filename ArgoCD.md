@@ -8,11 +8,12 @@
 ## Running
 ### Kubernetes setup
 1. Store AWS credentials and config in ~/.aws/
-2. `terraform init`
-3. `terraform apply`
-4. Check the cluster's name: `aws eks list-clusters `
-5. Generate kubeconfig: `aws eks update-kubeconfig --name <your cluster>`
-6. Verify connection via kubectl: `kubectl get nodes`
+2. Clone infra repo: `git clone git@github.com:SUU-Argo/infra.git && cd infra`
+3. `terraform init`
+4. `terraform apply`
+5. Check the cluster's name: `aws eks list-clusters `
+6. Generate kubeconfig: `aws eks update-kubeconfig --name <your cluster>`
+7. Verify connection via kubectl: `kubectl get nodes`
 
 ### ArgoCD setup
 1. Create namespace: `kubectl create namespace argocd`
@@ -37,6 +38,8 @@
 ![](img/app.png)
 
 ### Test sync
+This test has been performed on the [example-app](https://github.com/SUU-Argo/argocd-example-app).
+
 Changes will be synced only if there are changes in the `--path` directory (in this case it's `deploy`). \
 Even if code is modified and an image is built in order to be synced it requires a new tag (avoid tagging with latest).
 
