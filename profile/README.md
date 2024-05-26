@@ -81,7 +81,7 @@ Każda zmiana w repozytorium przechowującym kod aplikacji będzie automatycznie
 - [Couler](https://github.com/couler-proj/couler) - biblioteka do komunikacji z API Argo
 
 ### Opis konfiguracji
-![suu_env_conf drawio](suu_env_conf.drawio.png)
+![suu_env_conf drawio](https://github.com/SUU-Argo/.github/assets/46900653/65708f37-c412-4f7b-8d0c-fc4cf38f8fb8)
 
 ### Postępy prac
 
