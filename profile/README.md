@@ -18,6 +18,7 @@
 5. [Opis konfiguracji](#opis-konfiguracji)
 6. [Postępy prac](#postępy-prac)
 7. [Prezentacja Demo](#prezentacja-demo)
+8. [Struktura projektu](#struktura-projektu)
 
 ### Podstawy teoretyczne
 
@@ -80,10 +81,14 @@ Każda zmiana w repozytorium przechowującym kod aplikacji będzie automatycznie
 - [Couler](https://github.com/couler-proj/couler) - biblioteka do komunikacji z API Argo
 
 ### Opis konfiguracji
-![suu_env_conf drawio](https://github.com/SUU-Argo/.github/assets/46900653/65708f37-c412-4f7b-8d0c-fc4cf38f8fb8)
-
-
+![suu_env_conf drawio](suu_env_conf.drawio.png)
 
 ### Postępy prac
 
 ### Prezentacja Demo
+
+### Struktura projektu
+- [infra](https://github.com/SUU-Argo/infra)
+- [ArgoCD](https://github.com/SUU-Argo/.github/blob/main/ArgoCD.md)
+- [workflow-api](https://github.com/SUU-Argo/workflow-api)
+- [example-app](https://github.com/SUU-Argo/argocd-example-app)
