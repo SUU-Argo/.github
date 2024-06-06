@@ -89,6 +89,6 @@ Każda zmiana w repozytorium przechowującym kod aplikacji będzie automatycznie
 
 ### Struktura projektu
 - [infra](https://github.com/SUU-Argo/infra)
-- [ArgoCD](https://github.com/SUU-Argo/.github/blob/main/ArgoCD.md)
+- [ArgoCD](https://github.com/SUU-Argo/docs/blob/main/md/ArgoCD.md)
 - [workflow-api](https://github.com/SUU-Argo/workflow-api)
 - [example-app](https://github.com/SUU-Argo/argocd-example-app)
